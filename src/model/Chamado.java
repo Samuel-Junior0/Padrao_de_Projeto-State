@@ -1,7 +1,7 @@
 package model;
 
 import interfaces.EstadoChamado;
-import states.EstatoAberto;
+import states.EstadoAberto;
 
 public class Chamado {
     private String codigo;
@@ -13,7 +13,7 @@ public class Chamado {
         this.codigo = codigo;
         this.descricao = descricao;
         this.solicitante = solicitante;
-        this.estadoAtual = new EstatoAberto();
+        this.estadoAtual = new EstadoAberto();
     }
 
     public void iniciarAtendimento() {
@@ -38,8 +38,5 @@ public class Chamado {
 
     public void setEstado(EstadoChamado estado) {
         this.estadoAtual = estado;
-    }
-    public EstadoChamado getEstado() {
-        return this.estadoAtual;
     }
 }
